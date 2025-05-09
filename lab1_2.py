@@ -5,6 +5,14 @@ o = 0o23
 b = 0b0101
 
 '''
+The values are:
+d = 25 (decimal)
+h = 4779 (hexadecimal)
+o = 19 (octal)
+b = 5 (binary)'''
+'''
+
+
 When you do math with hexadecimal, octal, and binary, you always get a decimal (base 10) result.
 When you do division, the result is a float.
 '''
