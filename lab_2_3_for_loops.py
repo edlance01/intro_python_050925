@@ -25,3 +25,5 @@ for a in range(1,10):
         print(a*b, end=" ")
     print()
 
+# print a final line
+print("-" * 50)
