@@ -1,6 +1,9 @@
 # The code is a simple number guessing game where the user has to guess a number between 1 and 10.
 
-target_number = 7
+import random # for challenge  
+
+#target_number = 7
+target_number = random.randint(1, 10) # for challenge
 
 while True:
     
