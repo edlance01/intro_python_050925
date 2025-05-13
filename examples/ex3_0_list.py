@@ -1,7 +1,6 @@
 my_list = list(range(5))
 print(my_list)  # [0, 1, 2, 3, 4]
 
-
 letters = list("abcdfg")
 print(letters)  # ['a', 'b', 'c', 'd', 'f', 'g']
 
@@ -18,6 +17,8 @@ print(f"letters after append:{letters}")
 # extend
 letters.extend(my_list)
 print(f"letters after extending with my list of numbers: {letters}")
+new_list = letters + my_list
+
 
 # remove first occurence of 0
 letters.remove(0)
