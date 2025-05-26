@@ -37,6 +37,7 @@ for guess in guesses:
 msg = "Your highest guess was {}, and your lowest guess was {}".format(highest, lowest)
 print(msg)
 
+
 # challenge - allows for negative values
 high_dev = highest - target_number  
 low_dev = target_number - lowest

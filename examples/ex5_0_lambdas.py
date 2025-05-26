@@ -20,7 +20,7 @@ functions that take other functions as arguments or return functions.
 map() and filter() are built in higher-order functions in python.
 """
 
-# map - applies a fiven function to each item of an iterable and returns an iterator of the results
+# map - applies a given function to each item of an iterable and returns an iterator of the results
 numbers = [1,2,3,4,5]
 squared_numbers = list(map(lambda x: x**2, numbers))
 pdiv()

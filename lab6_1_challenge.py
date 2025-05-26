@@ -1,10 +1,15 @@
+import os
+print(f"Current working directory: {os.getcwd()}")
+
+from animal_util import choose_random_meal as meal
+
 class Cat:
     species = "Felidae"
 
     def __init__(self, name, collar_color):
         self.__name = name
         self.__collar_color = collar_color
-        #_Cat__name
+        # _Cat__name
 
     @property
     def name(self):
@@ -27,7 +32,10 @@ class Cat:
         self.__collar_color = value
 
     def eat(self):
-        print("All cats eat the same")
+       # print("All cats eat the same")
+
+       print(f"Dinner this evening is: {meal()}")
+
 
     def scratch_furniture(self, mood):
         amount = 0.0

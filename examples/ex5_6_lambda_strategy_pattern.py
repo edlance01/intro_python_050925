@@ -7,7 +7,7 @@ def create_comparison(compare_by):
     elif compare_by == "age":
         return lambda person1, person2: person1["age"] > person2["age"]
     else:
-        return lambda _, _: False
+        return lambda p1, p2: False
 
 
 people = [{"name": "Bob", "age": 30}, {"name": "Alice", "age": 25}]

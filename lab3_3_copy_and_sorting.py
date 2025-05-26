@@ -13,6 +13,7 @@ famous_guitarists = [
         "Stevie Ray Vaughan"
 ]
 
+
 fg_sorted = sorted(famous_guitarists)
 print(f"\nfg_sorted: {fg_sorted}")
 print(f"\nfamous_guitarist after sorted: {famous_guitarists}")
@@ -34,8 +35,9 @@ print(f"\nnums after nums.sort(): {nums}")
 print(divide)
 
 t = (3, 2, 15, 10)  # tuple object has no attribute sort
-print(sorted(t))  # the tuple becomes a list to sort it
-tuple(t)  # this changes it back to a tuple
+tl = sorted(t)
+print(tl)  # the tuple becomes a list to sort it
+tuple(tl)  # this changes it back to a tuple
 print(t)
 print(divide)
 
@@ -58,18 +60,20 @@ The following for loop prints the values in order of the sorted keys
 for i in sorted_dict:
     print(d[i])
 print(divide)
-
-example = {1: ["1", "one"], 2: ["2", "two"]}
-
-ex_copy = example.copy()
-print(example)
-print(ex_copy)
 print(divide)
 
-example[2] = ["2", "two", "TWO"]
-print(example) # this points to the new list
-print(ex_copy) # this points to the original list
+my_dict = {1: ["1", "one"], 2: ["2", "two"]}
+
+my_dict_copy = my_dict.copy()
+print(my_dict)
+print(my_dict_copy)
 print(divide)
+
+my_dict[2] = ["2", "two", "TWO"]
+print(f"my dict after change element 2: {my_dict}") # this points to the new list
+print(my_dict_copy) # this points to the original list
+print(divide)
+
 
 # BUT WATCH OUT FOR THIS...when the list contains a REFERENCE and the reference is changed, it changes for both
 # the original and copied list
@@ -86,8 +90,17 @@ listB.append("rst")
 print(f"listA after inner list (B) update:{listA}")
 print(f"listC after inner list (B) update:{listC}")
 
+# practical application
+print(divide)
+my_dict_list_one = my_dict[1]
+print(f"my dictionary list one: {my_dict_list_one}")
+new_list_copy = my_dict_list_one.copy()
+my_dict_copy[1] = new_list_copy
+my_dict_copy[1][1] = "two"
+print(f"my dictionary after change to my dictionary copy: {my_dict}")
+print(f"my dictionary copy after change: {my_dict_copy}")
 
-# Basic deep copy example
+# Basic deep copy my_dict
 names = {}
 names["A"] = ["Alice", "Alvin"]
 names_deep_copy = copy.deepcopy(names)
@@ -104,7 +117,7 @@ print(divide)
 # Deep copy with object reference
 print(f"names before deep copy with reference:{names}")
 names["C"] = ["Cindy", "Charles"]
- # should not change names_deep_copy
+# should not change names_deep_copy
 print(f"names AFTER append:{names}")
 print(f"names_deep_copy after append:{names_deep_copy}")
 print(divide)
